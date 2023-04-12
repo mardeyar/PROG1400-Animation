@@ -6,7 +6,7 @@ public class Ball {
     private int size;
     private int xPos;
     private int yPos;
-    private int xSpeed = 20;
+    private int xSpeed;
     private Color ballColor;
 
     // Constructor
@@ -19,6 +19,7 @@ public class Ball {
     }
 
     public void drawBall(Graphics g) {
+        g.setColor(getBallColor());
         g.fillOval(xPos, yPos, size, size);
     }
 
@@ -31,24 +32,8 @@ public class Ball {
         return size;
     }
 
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     public int getxPos() {
         return xPos;
-    }
-
-    public void setxPos(int xPos) {
-        this.xPos = xPos;
-    }
-
-    public int getyPos() {
-        return yPos;
-    }
-
-    public void setyPos(int yPos) {
-        this.yPos = yPos;
     }
 
     public int getxSpeed() {
@@ -61,9 +46,5 @@ public class Ball {
 
     public Color getBallColor() {
         return ballColor;
-    }
-
-    public void setBallColor(Color ballColor) {
-        this.ballColor = ballColor;
     }
 }
